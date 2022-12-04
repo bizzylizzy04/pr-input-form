@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Input Form</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- Input & Form Handling
+	* Using different input types for text (text, email, tel, password)
+	* Addig a placeholder in the text box
+	* Implementing different types of input options (dropdown, radio, checkbox, file)
+	* GET vs POST
+		** GET request sends all of the data in the URL (including passwords)
+		** POST sends all of the data in the BODY of the request (HTTPS: encrypts & scrambles the data communicated so its secure while sending in the body of the request)
+	* target="_blank" attribute & its use
+	* How to submit & reset a form
+	-->
+	<h1>Sign up now to the PAPAFAM</h1>
+
+	<form onsubmit="" method="post" target="_blank" autocomplete="on">
+		<!-- Different types of input fields -->
+		<div>
+			<label for="fname">First Name</label>
+			<input id="fname" type="text" placeholder="John" />
+		</div>
+
+		<div>
+			<label for="lname">Last Name</label>
+			<input id="lname" type="text" placeholder="Doe" />
+		</div>
+
+		<div>
+			<label for="email">Email Address</label>
+			<input id="email" type="email" placeholder="abc@gmail.com" />
+		</div>
+
+		<div>
+			<label for="phone">Telphone Number</label>
+			<input id="phone" type="tel" placeholder="123-456-7890" />
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input id="password" type="password" />
+		</div>
+
+		<!-- SELECT (dropdown choice) input fields -->
+		<div>
+			<label for="level">What is your current skill level in coding:</label>
+			<select id="level" name="level">
+				<option value="0">I'm a Beginner</option>
+				<option value="1">I'm an Intermediate</option>
+				<option value="2">I'm an Expert</option>
+				<option value="3">I live in the matrix with Sonny</option>
+			</select>
+		</div>
+
+		<!-- RADIO (select one) input fields -->
+		<div>
+			<label for="course">Which Membership would you like:</label>
+			<div>
+				<input type="radio" name="course" value="platinum" id="platinum" />
+				<label for="platinum">I want PAPA Platinum</label>
+				<br />
+
+				<input type="radio" name="course" value="diamond" id="diamond" checked />
+				<label for="diamond">I want PAPA Diamond</label>
+			</div>
+		</div>
+
+		<!-- CHECKBOX (select many) input fields -->
+		<div>
+			<label for="reason">Why do you want to join the PAPAFAM?</label>
+			<div>
+				<input type="checkbox" id="love" name="reason" value="love" checked />
+				<label for="love">I LOVE React!</label>
+				<br />
+
+				<input type="checkbox" id="community" name="reason" value="community" />
+				<label for="community">I want to be a part of an awesome community</label>
+				<br />
+
+				<input type="checkbox" id="job" name="reason" value="job" />
+				<label for="job">I want to land a job this year!</label>
+				<br />
+
+				<input type="checkbox" id="skills" name="reason" value="skills" />
+				<label for="skills">I want to push my current Coding Skills!</label>
+				<br />
+			</div>
+		</div>
+
+		<!-- File picker input field -->
+		<input type="file" />
+
+		<!-- Form control buttons -->
+		<div>
+			<button class="resetBtn" type="reset">RESET</button>
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+</body>
+</html>
